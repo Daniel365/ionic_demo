@@ -1,0 +1,125 @@
+li{
+            float: left;
+            width: 3.75rem;
+            padding:.2rem;
+            border-bottom:5px solid #e4e4e4;
+            &:nth-child(2n-1){
+                border-right:5px solid #e4e4e4;
+            }
+            img {
+                width: 100%;
+                display: block;
+                height: 3rem;
+            }
+            .content{
+                .top{
+                    font-size: .3rem;
+                    color:#1A1A1A;
+                    margin: .1rem 0;
+                    height: .8rem;
+                    width: 100%;
+                    word-break:break-all;
+                    display:-webkit-box;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient:vertical;
+                    overflow:hidden;
+                }
+                .bottom{
+                    span{
+                        display: inline-block;
+                        font-size: .28rem;
+                        &:nth-child(1){
+                            width: 60%;
+                            @include ellipsis();
+                        }
+                        &:nth-child(2){
+                            margin-left:1%;
+                            width: 39%;
+                            @include ellipsis();
+                        }
+                    }
+                    b{
+                        color: #fb5e2b;
+                    }
+                }
+            }
+        }
+
+
+
+.intergralList{
+        h2 {
+            padding:.3rem;
+            background: $gray-second-color;
+            font-size:.3rem;
+        }
+        li {
+            background-color: #fff;
+            margin-bottom:.3rem;
+            &:first-child {
+                margin-top:.4rem;
+            }
+            .checkbox{
+                float: left;
+                margin-top: .8rem;
+            }
+            .goodsInfo {
+                @include flex-block;
+                padding: 0 .2rem;
+                .img{
+                    margin:0 .3rem;
+                    width:2rem;
+                    img {
+                        display: inline-block;
+                        width: 100%;
+                        height: 2rem;
+                    }
+                }
+                .detail {
+                    @include flex-item;
+                    .goodsName {
+                        height: .9rem;
+                        margin-bottom:.1rem;
+                        font-size:.34rem;
+                        color:#1A1A1A;
+                        word-break:break-all;
+                        display:-webkit-box;
+                        -webkit-line-clamp:2;
+                        -webkit-box-orient:vertical;
+                        overflow:hidden;
+                        a {
+                            color:#333;
+                        }
+                    }
+                    .goodsPrice {
+                        margin-bottom:.1rem;
+                        font-size:.32rem;
+                        color:$main-color;
+                    }
+                    .goodsStock {
+                        font-size:.28rem;
+                        .r {
+                            float: right;
+                        }
+                    }
+                }
+            }
+            .btn {
+                border-top:1px solid #e4e4e4;
+                border-bottom:1px solid #e4e4e4;
+                padding:.1rem;
+                .default-btn {
+                    width: 2rem;
+                    height: .5rem;
+                    font-size: .28rem;
+                    float: right;
+                    margin-left: .2rem;
+                }
+                .complete{
+                    color:#ff5357;
+                    float: right;
+                    font-size: .28rem;
+                }
+            }
+        }
+    }
